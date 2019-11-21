@@ -1,0 +1,59 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Home>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+    Layout = null;
+}
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+    }
+    td{
+        padding:15px;
+    }
+    .Container {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 10%;
+    }
+</style>
+
+<div class="Container">
+    <h1>API Demo with Umbraco V8</h1>
+    <table>
+        <tr>
+            <td>#</td>
+            <td>Description</td>
+            <td>Endpoints</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>List all the Master Categories</td>
+            <td><a target="_blank" href="/api/v1/mastercategory">/api/v1/mastercategory</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>List all the Sub Categories</td>
+            <td><a target="_blank" href="/api/v1/subcategory/">/api/v1/subcategory/</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>List all the Shops</td>
+            <td><a target="_blank" href="/api/v1/shop">/api/v1/shop/</a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>List all the Shops under a Master Category</td>
+            <td><a target="_blank" href="/api/v1/shop/bymastercategory/dine">/api/v1/shop/bymastercategory/{master_category_name}</a></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>List all the Shops under a Sub Category</td>
+            <td><a target="_blank" href="/api/v1/shop/bysubcategory/veg">/api/v1/shop/bysubcategory/{sub_category_name}</a></td>
+        </tr>
+    </table>
+</div>
